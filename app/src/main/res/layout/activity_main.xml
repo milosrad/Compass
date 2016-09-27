@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cubes.compass.MainActivity"
+    android:background="@drawable/compass_background_blue"
+    android:id="@+id/root">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/editTexttime"
+        android:layout_marginBottom="98dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/text_color"
+        android:textSize="16dp"/>
+
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="GOOD MORNING!"
+        android:ems="10"
+        android:id="@+id/editTexthello"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/text_color"
+        android:textSize="16dp"
+
+        android:layout_below="@+id/imageViewcompass"
+        android:layout_toEndOf="@+id/editTexttime"
+        android:layout_alignBottom="@+id/editTexttime"
+        android:layout_toRightOf="@+id/editTexttime" />
+
+
+    <TextView
+        android:id="@+id/compassheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heading"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="46dp"
+        android:textColor="@color/text_color"
+        android:textSize="16dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewneedle"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/compasshi"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:id="@+id/imageViewcompass"
+        android:src="@drawable/compass2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/editTexttime" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latitude:"
+        android:id="@+id/textViewlatitude"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/compassheading"
+        android:layout_alignEnd="@+id/compassheading"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/text_color"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Longitude:"
+        android:id="@+id/textViewlongitude"
+        android:textColor="@color/text_color"
+        android:textSize="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/editTexttime"
+        android:layout_alignTop="@+id/textViewlatitude"
+        android:layout_alignRight="@+id/textViewName"
+        android:layout_alignEnd="@+id/textViewName" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textViewName"
+        android:layout_alignRight="@+id/editTexthello"
+        android:layout_alignEnd="@+id/editTexthello"
+        android:textColor="@color/text_color"
+        android:textSize="16dp"
+        android:layout_below="@+id/editTexthello" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textViewdate"
+        android:textColor="@color/text_color"
+        android:textSize="16dp"
+        android:layout_toLeftOf="@+id/textViewName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/textViewName"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/editTexttime"
+        android:layout_alignEnd="@+id/editTexttime" />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="New Text"
+    android:id="@+id/textViewsunriseTime"
+    android:layout_alignParentRight="true"
+    android:inputType="time"
+    android:textColor="@color/text_color"
+    android:textSize="16dp"
+    android:layout_toRightOf="@+id/textViewdate"
+    android:layout_toEndOf="@+id/textViewdate"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textViewsunsetTime"
+        android:layout_alignParentRight="true"
+        android:inputType="time"
+        android:textColor="@color/text_color"
+        android:textSize="16dp"
+        android:layout_toRightOf="@+id/textViewdate"
+        android:layout_toEndOf="@+id/textViewdate"
+        android:layout_below="@+id/textViewsunriseTime"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weather_button_text"
+        android:id="@+id/buttonweatherupdate"
+        android:layout_below="@+id/textViewsunsetTime"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/text_color"/>
+</RelativeLayout>
